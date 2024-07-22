@@ -7,6 +7,8 @@
     padding: 0 0 50px 0;
     margin-top: 60px;
     margin-bottom: 15px;
+    overflow-y: scroll;
+    height: 500px;
 }
 .chat li {
     padding: 0.5rem;
@@ -14,22 +16,22 @@
     display: flex;
 }
 
-.other .msg {
-    border-top-left-radius: 0px;
-    box-shadow: -1px 2px 0px #c1cbcd;
-}
-.other:before {
+/*.other .msg {*/
+/*    border-top-left-radius: 0px;*/
+/*    box-shadow: -1px 2px 0px #becef3;*/
+/*}*/
+/*.other:before {
     content: "";
-    position: relative;
-    top: 0px;
+    position: sticky;
+    top: 54px;
     right: 0px;
-    left: 0px;
+    left: 1px;
     width: 0px;
     height: 0px;
     border: 5px solid #becef3;
     border-left-color: transparent;
-    border-bottom-color: transparent;
-}
+    border-top-color: transparent;
+}*/
 
 .self {
     justify-content: flex-end;
@@ -39,8 +41,9 @@
     border-bottom-right-radius: 0px;
     box-shadow: 1px 2px 0px #c1cbcd;
     background-color: #c3c6cb;
+    width: 200px;
 }
-.self:after {
+/*.self:after {
     content: "";
     position: relative;
     display: inline-block;
@@ -53,7 +56,7 @@
     border-right-color: transparent;
     border-top-color: transparent;
     box-shadow: 0px 2px 0px #c1cbcd;
-}
+}*/
 
 .msg {
     background: #becef3;
@@ -63,29 +66,44 @@
     word-break: break-all;
 }
 .msg p {
+    width: 200px;
     font-size: 13px;
     margin: 0 0 2px 0;
     color: #18181b;
     transition: all .2s ease;
 }
 
-.msg time {
+.other .msg time {
     font-size: 0.7rem;
     color: #18181b;
     margin-top: 3px;
+    float: left;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    position: relative;
+    top: 8px;
+}
+.self .msg time {
+    font-size: 0.7rem;
+    color: #18181b;
     float: right;
     cursor: default;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    position: relative;
+    top: 8px;
 }
-.msg time:before{
-    color: #ddd;
-    font-family: FontAwesome;
-    display: inline-block;
-    margin-right: 4px;
-}
+/*.msg time:before{*/
+/*    color: #ddd;*/
+/*    font-family: FontAwesome;*/
+/*    display: inline-block;*/
+/*    margin-right: 4px;*/
+/*}*/
 
 .main_title {
     font-size: 20px !important;
