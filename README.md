@@ -52,12 +52,12 @@ Need to PHP version 8.2 or above, laravel version 11 or above
 
 ### Running the Application
 
-- **Start the Laraship Backend:**
+- **Start laravel Backend:**
     ```bash
     php artisan serve
     ```
 
-- **Start the React/Next.js Frontend:**
+- **Start the Frontend:**
     ```bash
     npm run dev
     ```
